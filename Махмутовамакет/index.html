@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Модальные окна</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="authBtn">Открыть окно входа</button>
+    <button id="commentsBtn">Открыть комментарии</button>
+
+    <!-- Модальное окно входа -->
+    <div id="authModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="auth-title">Вход</h2>
+        <div class="input-container">
+          <label class="input-label">Телефон</label>
+          <input
+            type="tel"
+            class="phone-input"
+            placeholder="+7 (___) ___-__-__"
+          />
+          <button class="login-btn">Вход</button>
+          <div class="bottom-row">
+            <button class="register-btn">Регистрация</button>
+            <a href="#" class="forgot-password">Забыли пароль?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модальное окно комментариев -->
+    <div id="commentsModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="comments-title">Комментарии</h2>
+
+        <div class="comment-container">
+          <div class="comment" tabindex="0">
+            <div class="comment-header">
+              <span class="comment-author">Дмитрий (курьер)</span>
+              <span class="comment-date">21.01.2021</span>
+            </div>
+            <div class="comment-text">
+              У клиента были гнилые половина помидоров. Он сказал возьмет их.
+              Надо возместить бонусами.
+            </div>
+          </div>
+
+          <div class="comment" tabindex="0">
+            <div class="comment-header">
+              <span class="comment-author">Аня (менеджер)</span>
+              <span class="comment-date">22.02.2021</span>
+            </div>
+            <div class="comment-text">
+              Созвонились с клиентом. Я начислила 50 балов.
+            </div>
+          </div>
+
+          <div class="comment-input-container">
+            <textarea
+              class="new-comment-input"
+              placeholder="Введите ваш комментарий..."
+            ></textarea>
+          </div>
+        </div>
+
+        <button class="send-btn">Отправить</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

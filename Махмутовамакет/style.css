@@ -1,0 +1,241 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+  gap: 20px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #fcd5ba;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 4px;
+}
+
+/* Стили для модальных окон */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  border-radius: 10px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+.close:hover {
+  color: black;
+}
+
+/* Модальное окно входа */
+#authModal .modal-content {
+  width: 420px;
+  height: 431px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.auth-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-label {
+  align-self: flex-start;
+  margin-left: 52px !important;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.phone-input {
+  width: 260px;
+  height: 60px;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.phone-input:hover {
+  border-color: #70c05b; 
+}
+
+.login-btn {
+  width: 260px;
+  height: 60px;
+  background-color: #fcd5ba;
+  color: #ff6633;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 260px;
+}
+
+.register-btn {
+  width: 121px;
+  height: 32px;
+  background-color: transparent;
+  border: 1px solid #70c05b;
+  color: #70c05b;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.forgot-password {
+  color: #70c05b;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* Модальное окно комментариев */
+#commentsModal .modal-content {
+  width: 600px;
+  height: 661px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.comments-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 32px;
+  color: #333;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  height: calc(100% - 150px);
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.comment {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.comment:hover,
+.comment:focus {
+  outline: none;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.comment-author {
+  font-weight: bold;
+  color: #888 !important;
+}
+
+.comment-date {
+  color: #888;
+  font-size: 0.9em;
+}
+
+.comment-text {
+  color: #333;
+  line-height: 1.5;
+}
+
+.comment-input-container {
+  margin-top: 20px;
+}
+
+.new-comment-input {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #e0e0e0 !important;
+  transition: border-color 0.3s ease;
+  outline: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  resize: none;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.new-comment-input:hover,
+.new-comment-input:focus {
+  border-color: #70C05B !important;
+}
+
+.new-comment-input::placeholder {
+  color: #888;
+}
+
+.send-btn {
+  width: 400px;
+  height: 68px;
+  background-color: #fcd5ba;
+  color: #ff6633;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+}
